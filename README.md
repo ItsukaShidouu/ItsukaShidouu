@@ -2,9 +2,6 @@
 
 <img align="center" src="https://i.pinimg.com/originals/97/41/f0/9741f0c6151635b29300e6f7656e1644.gif" style="border-radius: 10px;"/>
 
-# `Account information`
-> My goal in creating this GitHub account is to express my ideas about coding. Usually, this is a hobby. I often code Node.js, JavaScript, HTML, CSS, and so on!  
-
 ---------
 
 <details open align="center">
