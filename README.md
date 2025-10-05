@@ -22,7 +22,7 @@
 <br>
 
 <p align="center">
-  <img src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=BukanNPC&theme=nightowl" />
+  <img src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=itsukashidouu&theme=nightowl" />
 </p>
 
 ------
