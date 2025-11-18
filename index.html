@@ -4,11 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>NeofetchNpc - Profile</title>
+
   <!-- Tailwind + DaisyUI CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-base-200 text-base-content">
+
+<body class="bg-base-200 text-base-content min-h-screen flex flex-col">
 
   <!-- Navbar -->
   <div class="navbar bg-base-300 shadow-md sticky top-0 z-50">
@@ -18,53 +20,62 @@
     <div class="flex-none">
       <a href="#skills" class="btn btn-sm btn-primary mx-1">Skills</a>
       <a href="#github" class="btn btn-sm btn-secondary mx-1">GitHub</a>
-      <a href="#spotify" class="btn btn-sm btn-accent mx-1">Spotify</a>
     </div>
   </div>
 
-  <main class="container mx-auto px-4">
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 flex-grow">
 
     <!-- Header GIF -->
     <section class="flex justify-center py-8">
-      <img src="https://i.pinimg.com/originals/97/41/f0/9741f0c6151635b29300e6f7656e1644.gif" 
-           alt="Profile GIF" 
-           class="rounded-2xl shadow-xl max-w-full"/>
+      <img 
+        src="https://i.pinimg.com/originals/97/41/f0/9741f0c6151635b29300e6f7656e1644.gif"
+        alt="Profile GIF" 
+        class="rounded-2xl shadow-xl max-w-full"
+      />
     </section>
 
     <!-- Visitor Counter -->
-    <section class="my-8">
-      <div class="card bg-base-300 shadow-xl w-fit mx-auto p-6">
+    <section class="my-8 flex justify-center">
+      <div class="card bg-base-300 shadow-xl p-6">
         <details class="collapse collapse-arrow">
-          <summary class="collapse-title font-bold text-primary text-lg">↓ Total Profile Visitors ↓</summary>
+          <summary class="collapse-title font-bold text-primary text-lg">
+            ↓ Total Profile Visitors ↓
+          </summary>
           <div class="collapse-content flex justify-center py-4">
             <a href="https://www.instagram.com/yusupk._">
-              <img alt="Cute Count" src="https://count.getloli.com/get/@NeofetchNpc?theme=rule34"/>
+              <img 
+                alt="Cute Count"
+                src="https://count.getloli.com/get/@NeofetchNpc?theme=rule34"
+              />
             </a>
           </div>
         </details>
       </div>
     </section>
 
-    <!-- Skill Badges -->
+    <!-- Skills -->
     <section id="skills" class="my-8">
       <h2 class="text-2xl font-bold mb-4 text-center text-primary">💻 Skills</h2>
       <div class="flex flex-wrap justify-center gap-4">
-        <img src="https://img.shields.io/badge/html%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white" class="rounded-lg shadow"/>
-        <img src="https://img.shields.io/badge/css%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white" class="rounded-lg shadow"/>
-        <img src="https://img.shields.io/badge/TypeScript-%233178C6.svg?&style=for-the-badge&logo=typescript&logoColor=white" class="rounded-lg shadow"/>
-        <img src="https://img.shields.io/badge/node.js%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white" class="rounded-lg shadow"/>
-        <img src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" class="rounded-lg shadow"/>
-        <img src="https://img.shields.io/badge/git%20-%23F05033.svg?&style=for-the-badge&logo=git&logoColor=white" class="rounded-lg shadow"/>
+        <img src="https://img.shields.io/badge/html-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" class="rounded-lg shadow"/>
+        <img src="https://img.shields.io/badge/css-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" class="rounded-lg shadow"/>
+        <img src="https://img.shields.io/badge/TypeScript-%233178C6.svg?style=for-the-badge&logo=typescript&logoColor=white" class="rounded-lg shadow"/>
+        <img src="https://img.shields.io/badge/node.js-%2343853D.svg?style=for-the-badge&logo=node.js&logoColor=white" class="rounded-lg shadow"/>
+        <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" class="rounded-lg shadow"/>
+        <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" class="rounded-lg shadow"/>
       </div>
     </section>
 
-    <!-- Github Summary -->
+    <!-- GitHub Summary -->
     <section id="github" class="my-8">
       <h2 class="text-2xl font-bold mb-4 text-center text-secondary">📊 GitHub Summary</h2>
       <div class="flex justify-center">
-        <img src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=BukanNPC&theme=nightowl" 
-             alt="Github Summary" 
-             class="rounded-lg shadow-lg w-full max-w-4xl"/>
+        <img
+          src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=BukanNPC&theme=nightowl"
+          alt="Github Summary"
+          class="rounded-lg shadow-lg w-full max-w-4xl"
+        />
       </div>
     </section>
 
