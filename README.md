@@ -23,8 +23,7 @@
 
 <p align="center">
   <img src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=itsukashidouu&theme=nightowl" />
+  <img src="https://lanyard.cnrad.dev/api/722687501298434099"/>
 </p>
 
 ------
-
-[![Discord Presence](https://lanyard.cnrad.dev/api/722687501298434099)](https://discord.com/users/722687501298434099)
