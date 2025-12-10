@@ -1,0 +1,135 @@
+<#include "assets/base.html">
+<div class="container mb-2">  <#if error??>
+    <div class="alert alert-danger" role="alert">
+        ${error}
+    </div>
+</#if>
+<#if info??>
+    <div class="alert alert-primary" role="alert">
+        ${info}
+    </div>
+</#if></div>
+          
+    <div style="min-height: 600px;" class="container desktop">
+        <div style="min-height: 600px;" class="home-video d-flex flex-grow-1 mb-4">
+
+            <div id="spinner" class="spinner-grow position-absolute" role="status">
+                <span style="left: 50%; right: 50%; z-index: 200;" class="visually-hidden">Loading...</span>
+            </div>
+                <video style="object-fit: cover; height: 600px;" src="${c.homeVideoUrl}" id="video" class="video lazy-video" autoplay loop muted></video>
+         
+            <div class="overlay">
+                <div class="row">
+                    <div class="col lol col-6" >
+                        <div class="m-3 m-sm-5">
+                            <h1 class="display-4">${c.serverName}</h1>
+                            <div class="lead-h">${c.homeDescription}</div>
+                                <div class="badge-grp">
+                                    <span class="home-badge"><span class="purple">${playerCount.total}</span> Registered</span>
+                                    <span class="home-badge"><span class="green">${playerCount.online}</span> Online</span>
+                                    <span class="home-badge d-none d-sm-inline"><span class="yellow">${customCount.clans}</span> Clans</span>
+                                </div>
+                                <div class="badge-grp">
+                                    <span class="home-badge"><span class="red">${customCount.plays}</span> Plays</span>
+                                    <span class="home-badge"><span class="cyan">${customCount.beatmaps}</span> Beatmaps</span>
+                                </div>
+                                <div class="mt-2">
+                                    <#if !loggedIn>
+                                    <a class="btn btn-primary" href="/register" role="button">Register</a>
+                                </#if>
+                                <a class="btn btn-discord" href="${c.discordUrl}" role="button">Discord</a>
+                                <a class="btn btn-secondary" href="/docs/connect">How to connect?</a>
+                                </div>
+                           
+                        </div>
+
+
+                    </div>
+                    <div class="col col-6 logo-col">
+                        <img src="${c.homeBigLogoUrl}" class="d-flex justify-content-center mx-auto"
+                            style="width: inherit; max-width: 40%;" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="d-flex bg-body my-5" id="feature-cards" style="margin-top: 20px;">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12 col-lg-3 mb-4">
+                    <div class="shiina-up-card shiina-card border-0 shadow-sm h-100 bg-secondary text-body rounded-3">
+                        <div class="card-body d-flex flex-column align-items-center py-4">
+                            <i class="fa fa-people-robbery fa-3x mb-3 text-primary"></i>
+                            <h5 class="shiina-up-card-title card-title mb-3">Integrated Clans</h5>
+                            <p class="shiina-up-card-text card-text mx-1 mb-0">${c.serverName} offers competitive clan gameplay with statistics</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3 mb-4">
+                    <div class="shiina-up-card shiina-card border-0 shadow-sm h-100 bg-secondary text-body rounded-3">
+                        <div class="card-body d-flex flex-column align-items-center py-4">
+                            <i class="fa fa-wrench fa-3x mb-3 text-primary"></i>
+                            <h5 class="shiina-up-card-title card-title mb-3">Maintained Environment</h5>
+                            <p class="shiina-up-card-text card-text mx-1 mb-0">Our developers are working hard to improve our services</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <#if c.showAdditionalStats>
+    <section class="bg-body py-5" id="server-stats">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="stat-card shiina-card d-flex justify-content-between align-items-center bg-secondary text-body p-4 rounded-3 shadow-sm">
+                        <div class="d-flex align-items-center">
+                            <i class="fa fa-server fa-3x me-3 text-primary"></i>
+                            <div>
+                                <h5 class="mb-0">Ingame Logins</h5>
+                                <small class="text-muted">Today: ${customCount.loginsToday}</small>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="fw-bold mb-0">${customCount.totalLogins}</h4>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="stat-card shiina-card d-flex justify-content-between align-items-center bg-secondary text-body p-4 rounded-3 shadow-sm">
+                        <div class="d-flex align-items-center">
+                            <i class="fa fa-users fa-3x me-3 text-primary"></i>
+                            <div>
+                                <h5 class="mb-0">Running Since</h5>
+                               
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="fw-bold mb-0"data-timestamp-format="date" data-timestamp="${startup}">${startup}</h4>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="stat-card shiina-card d-flex justify-content-between align-items-center bg-secondary text-body p-4 rounded-3 shadow-sm">
+                        <div class="d-flex align-items-center">
+                            <i class="fa fa-download fa-3x me-3 text-primary"></i>
+                            <div>
+                                <h5 class="mb-0">Staff Members</h5>
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="fw-bold mb-0">${customCount.staff}</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </#if>
+</div>
+</div>
+<#include "assets/footer.html">
