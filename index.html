@@ -1,63 +1,300 @@
 <!doctype html>
 <html lang="id" data-theme="dark">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio pribadi ItsukaShidouu — web developer, builder, dan open-source enthusiast.">
-  <meta name="theme-color" content="#11110f">
-  <title>ItsukaShidouu — Personal Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="global.css">
-  <style>.tool-list{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:10px}.tool-list li{display:flex;align-items:center;gap:11px;color:var(--muted);transition:color .2s,transform .2s}.tool-list li:hover{color:var(--text);transform:translateX(4px)}.tool-list img{width:20px;height:20px;object-fit:contain;flex:0 0 20px}</style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio pribadi ItsukaShidouu — web developer, builder, dan open-source enthusiast."
+    />
+    <meta name="theme-color" content="#11110f" />
+    <title>ItsukaShidouu — Personal Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="global.css" />
+    <style>
+      .tool-list {
+        list-style: none;
+        padding: 0;
+        margin: 18px 0 0;
+        display: grid;
+        gap: 10px;
+      }
+      .tool-list li {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        color: var(--muted);
+        transition:
+          color 0.2s,
+          transform 0.2s;
+      }
+      .tool-list li:hover {
+        color: var(--text);
+        transform: translateX(4px);
+      }
+      .tool-list img {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+        flex: 0 0 20px;
+      }
+    </style>
   </head>
-<body>
-  <div class="cursor-glow" aria-hidden="true"></div>
-  <div class="scroll-progress" aria-hidden="true"></div>
-  <div class="site-shell">
-    <aside class="sidebar" aria-label="Navigasi utama">
-      <a class="brand" href="#home" aria-label="Kembali ke beranda">
-        <span class="brand-mark">IS</span>
-        <span><strong>itsuka</strong><small>shidouu</small></span>
-      </a>
-      <div class="profile-card">
-        <div class="avatar-wrap"><img id="profile-avatar" src="logo.png" alt="Foto profil GitHub"></div>
-        <strong id="profile-name">ItsukaShidouu</strong>
-        <span class="status"><i></i> <span id="profile-status">Available for ideas</span></span>
-      </div>
-      <nav class="nav-links">
-        <a class="active" href="#home"><span>01</span> Home</a>
-        <a href="#about"><span>02</span> About</a>
-        <a href="#stack"><span>03</span> Stack</a>
-        <a href="#projects"><span>04</span> Projects</a>
-      </nav>
-      <div class="sidebar-footer"><span>© <span id="year"></span> IS</span><a href="https://github.com/itsukashidouu" target="_blank" rel="noreferrer">GitHub ↗</a></div>
-    </aside>
+  <body>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <div class="site-shell">
+      <aside class="sidebar" aria-label="Navigasi utama">
+        <a class="brand" href="#home" aria-label="Kembali ke beranda">
+          <span class="brand-mark">IS</span>
+          <span><strong>itsuka</strong><small>shidouu</small></span>
+        </a>
+        <div class="profile-card">
+          <div class="avatar-wrap">
+            <img id="profile-avatar" src="logo.png" alt="Foto profil GitHub" />
+          </div>
+          <strong id="profile-name">ItsukaShidouu</strong>
+          <span class="status"
+            ><i></i> <span id="profile-status">Available for ideas</span></span
+          >
+        </div>
+        <nav class="nav-links">
+          <a class="active" href="#home"><span>01</span> Home</a>
+          <a href="#about"><span>02</span> About</a>
+          <a href="#stack"><span>03</span> Stack</a>
+          <a href="#projects"><span>04</span> Projects</a>
+        </nav>
+        <div class="sidebar-footer">
+          <span>© <span id="year"></span> IS</span
+          ><a
+            href="https://github.com/itsukashidouu"
+            target="_blank"
+            rel="noreferrer"
+            >GitHub ↗</a
+          >
+        </div>
+      </aside>
 
-    <main class="content" id="home">
-      <div class="mobile-spacer" aria-hidden="true"></div>
+      <main class="content" id="home">
+        <div class="mobile-spacer" aria-hidden="true"></div>
 
-      <section class="hero section-pad reveal">
-        <div class="hero-avatar"><img id="hero-avatar" src="logo.png" alt="Profil GitHub"></div>
-        <div class="eyebrow"><span class="pulse-dot"></span> OPEN TO WORK <b>·</b> WEB DEVELOPER</div>
-        <h1>Halo, saya <em>ItsukaShidouu.</em><br><span>Saya membangun hal-hal<br>yang terasa <i>berarti.</i></span></h1>
-        <p class="hero-copy">Seorang developer yang senang mengubah ide menjadi website, tools, dan pengalaman digital yang sederhana, cepat, dan punya karakter.</p>
-        <div class="hero-actions"><a class="button button-primary" href="#projects">Lihat project <span>↗</span></a><a class="button button-ghost" href="https://github.com/itsukashidouu" target="_blank" rel="noreferrer">Buka GitHub <span>↗</span></a></div>
-        <div class="social-row"><span class="label">TEMUKAN SAYA</span><a href="https://github.com/itsukashidouu" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.instagram.com/yusupk._" target="_blank" rel="noreferrer">Instagram</a><a href="mailto:hello@itsuka.dev">Email</a></div>
-      </section>
+        <section class="hero section-pad reveal">
+          <div class="hero-avatar">
+            <img id="hero-avatar" src="logo.png" alt="Profil GitHub" />
+          </div>
+          <div class="eyebrow">
+            <span class="pulse-dot"></span> OPEN TO WORK <b>·</b> WEB DEVELOPER
+          </div>
+          <h1>
+            Halo, saya <em>ItsukaShidouu.</em><br /><span
+              >Saya membangun hal-hal<br />yang terasa <i>berarti.</i></span
+            >
+          </h1>
+          <p class="hero-copy">
+            Seorang developer yang senang mengubah ide menjadi website, tools,
+            dan pengalaman digital yang sederhana, cepat, dan punya karakter.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects"
+              >Lihat project <span>↗</span></a
+            ><a
+              class="button button-ghost"
+              href="https://github.com/itsukashidouu"
+              target="_blank"
+              rel="noreferrer"
+              >Buka GitHub <span>↗</span></a
+            >
+          </div>
+          <div class="social-row">
+            <span class="label">TEMUKAN SAYA</span
+            ><a
+              href="https://github.com/itsukashidouu"
+              target="_blank"
+              rel="noreferrer"
+              >GitHub</a
+            ><a
+              href="https://www.instagram.com/yusupk._"
+              target="_blank"
+              rel="noreferrer"
+              >Instagram</a
+            ><a href="mailto:hello@itsuka.dev">Email</a>
+          </div>
+        </section>
 
-      <section class="quick-facts" aria-label="Ringkasan profil"><div><small>FOLLOWERS</small><strong id="github-followers">—</strong></div><div><small>REPOSITORIES</small><strong id="github-repos">—</strong></div><div><small>LOCATION</small><strong id="github-location">Indonesia</strong></div><div><small>PUBLIC GISTS</small><strong class="green-text" id="github-gists">—</strong></div></section>
+        <section class="quick-facts" aria-label="Ringkasan profil">
+          <div>
+            <small>FOLLOWERS</small><strong id="github-followers">—</strong>
+          </div>
+          <div>
+            <small>REPOSITORIES</small><strong id="github-repos">—</strong>
+          </div>
+          <div>
+            <small>LOCATION</small
+            ><strong id="github-location">Indonesia</strong>
+          </div>
+          <div>
+            <small>PUBLIC GISTS</small
+            ><strong class="green-text" id="github-gists">—</strong>
+          </div>
+        </section>
 
-      <section class="section-pad content-section reveal" id="about"><div class="section-label">01 — ABOUT</div><div class="section-heading"><h2>Sedikit tentang<br><em>saya.</em></h2><div><p>Saya percaya website yang bagus bukan hanya soal tampilan. Ia harus terasa ringan, mudah dipahami, dan memberi alasan untuk kembali.</p><a class="text-link" href="https://github.com/itsukashidouu" target="_blank" rel="noreferrer">Kenali lebih dekat <span>↗</span></a></div></div></section>
+        <section class="section-pad content-section reveal" id="about">
+          <div class="section-label">01 — ABOUT</div>
+          <div class="section-heading">
+            <h2>Sedikit tentang<br /><em>saya.</em></h2>
+            <div>
+              <p>
+                Saya percaya website yang bagus bukan hanya soal tampilan. Ia
+                harus terasa ringan, mudah dipahami, dan memberi alasan untuk
+                kembali.
+              </p>
+              <a
+                class="text-link"
+                href="https://github.com/itsukashidouu"
+                target="_blank"
+                rel="noreferrer"
+                >Kenali lebih dekat <span>↗</span></a
+              >
+            </div>
+          </div>
+        </section>
 
-      <section class="section-pad content-section reveal" id="stack"><div class="section-label">02 — TOOLKIT</div><div class="section-heading"><h2>Yang saya<br><em>gunakan.</em></h2><p class="muted">Tools yang menemani saya dari ide sampai production.</p></div><div class="stack-grid"><div><h3>Frontend</h3><ul class="tool-list"><li><img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5">HTML5</li><li><img src="https://cdn.simpleicons.org/css3/1572B6" alt="CSS3">CSS3</li><li><img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript">JavaScript</li><li><img src="https://cdn.simpleicons.org/react/61DAFB" alt="React">React</li></ul></div><div><h3>Backend</h3><ul class="tool-list"><li><img src="https://cdn.simpleicons.org/nodedotjs/68A063" alt="Node.js">Node.js</li><li><img src="https://cdn.simpleicons.org/typescript/3178C6" alt="TypeScript">TypeScript</li><li><img src="https://cdn.simpleicons.org/express/FFFFFF" alt="Express">Express</li><li><img src="https://cdn.simpleicons.org/restfulapi/78C257" alt="REST API">REST API</li></ul></div><div><h3>Workflow</h3><ul class="tool-list"><li><img src="https://cdn.simpleicons.org/git/F05032" alt="Git">Git</li><li><img src="https://cdn.simpleicons.org/github/FFFFFF" alt="GitHub">GitHub</li><li><img src="https://cdn.simpleicons.org/figma/F24E1E" alt="Figma">Figma</li><li><img src="https://cdn.simpleicons.org/visualstudiocode/007ACC" alt="VS Code">VS Code</li></ul></div></div></section>
+        <section class="section-pad content-section reveal" id="stack">
+          <div class="section-label">02 — TOOLKIT</div>
+          <div class="section-heading">
+            <h2>Yang saya<br /><em>gunakan.</em></h2>
+            <p class="muted">
+              Tools yang menemani saya dari ide sampai production.
+            </p>
+          </div>
+          <div class="stack-grid">
+            <div>
+              <h3>Frontend</h3>
+              <ul class="tool-list">
+                <li>
+                  <img
+                    src="https://cdn.simpleicons.org/html5/E34F26"
+                    alt="HTML5"
+                  />HTML5
+                </li>
+                <li>
+                  <img
+                    src="https://cdn.simpleicons.org/css3/1572B6"
+                    alt="CSS3"
+                  />CSS3
+                </li>
+                <li>
+                  <img
+                    src="https://cdn.simpleicons.org/javascript/F7DF1E"
+                    alt="JavaScript"
+                  />JavaScript
+                </li>
+                <li>
+                  <img
+                    src="https://cdn.simpleicons.org/react/61DAFB"
+                    alt="React"
+                  />React
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3>Backend</h3>
+              <ul class="tool-list">
+                <li>
+                  <img
+                    src="https://cdn.simpleicons.org/nodedotjs/68A063"
+                    alt="Node.js"
+                  />Node.js
+                </li>
+                <li>
+                  <img
+                    src="https://cdn.simpleicons.org/typescript/3178C6"
+                    alt="TypeScript"
+                  />TypeScript
+                </li>
+                <li>
+                  <img
+                    src="https://cdn.simpleicons.org/express/FFFFFF"
+                    alt="Express"
+                  />Express
+                </li>
+                <li>
+                  <img
+                    src="https://cdn.simpleicons.org/restfulapi/78C257"
+                    alt="REST API"
+                  />REST API
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3>Workflow</h3>
+              <ul class="tool-list">
+                <li>
+                  <img
+                    src="https://cdn.simpleicons.org/git/F05032"
+                    alt="Git"
+                  />Git
+                </li>
+                <li>
+                  <img
+                    src="https://cdn.simpleicons.org/github/FFFFFF"
+                    alt="GitHub"
+                  />GitHub
+                </li>
+                <li>
+                  <img
+                    src="https://cdn.simpleicons.org/figma/F24E1E"
+                    alt="Figma"
+                  />Figma
+                </li>
+                <li>
+                  <img
+                    src="https://cdn.simpleicons.org/visualstudiocode/007ACC"
+                    alt="VS Code"
+                  />VS Code
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
-      <section class="section-pad content-section projects-section" id="projects"><div class="section-label">03 — SELECTED WORK</div><div class="section-heading"><h2>Beberapa<br><em>eksperimen.</em></h2><p class="muted">Kumpulan project dan hal-hal yang sedang saya pelajari.</p></div><div class="project-list" id="github-projects"><p class="muted">Memuat project dari GitHub...</p></div></section>
+        <section
+          class="section-pad content-section projects-section"
+          id="projects"
+        >
+          <div class="section-label">03 — SELECTED WORK</div>
+          <div class="section-heading">
+            <h2>Beberapa<br /><em>eksperimen.</em></h2>
+            <p class="muted">
+              Kumpulan project dan hal-hal yang sedang saya pelajari.
+            </p>
+          </div>
+          <div class="project-list" id="github-projects">
+            <p class="muted">Memuat project dari GitHub...</p>
+          </div>
+        </section>
 
-      <footer class="footer section-pad"><div><strong>Mari membuat sesuatu.</strong><p>Punya ide atau sekadar ingin menyapa?</p></div><a class="button button-primary" href="mailto:hello@itsuka.dev">Hubungi saya ↗</a><div class="footer-bottom"><span>Designed &amp; built with intention.</span><span>GitHub Pages ready</span></div></footer>
-    </main>
-  </div>
-  <script src="script.js"></script>
-</body>
-</html>"}},{
+        <footer class="footer section-pad">
+          <div>
+            <strong>Mari membuat sesuatu.</strong>
+            <p>Punya ide atau sekadar ingin menyapa?</p>
+          </div>
+          <a class="button button-primary" href="mailto:hello@itsuka.dev"
+            >Hubungi saya ↗</a
+          >
+          <div class="footer-bottom">
+            <span>Designed &amp; built with intention.</span
+            ><span>GitHub Pages ready</span>
+          </div>
+        </footer>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+"}},{
