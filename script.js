@@ -1,34 +1,15 @@
-const menuButton = document.querySelector('.menu-toggle');
-const mobileNav = document.querySelector('.mobile-nav');
-const year = document.querySelector('#year');
+const menuButton=document.querySelector('.menu-toggle');const mobileNav=document.querySelector('.mobile-nav');const year=document.querySelector('#year');const themeButton=document.querySelector('.theme-toggle');const root=document.documentElement;const progress=document.querySelector('.scroll-progress');const glow=document.querySelector('.cursor-glow');
+if(year)year.textContent=new Date().getFullYear();
+menuButton?.addEventListener('click',()=>{const open=menuButton.getAttribute('aria-expanded')==='true';menuButton.setAttribute('aria-expanded',String(!open));mobileNav.hidden=open;menuButton.textContent=open?'Menu':'Tutup'});
+document.querySelectorAll('.mobile-nav a').forEach(link=>link.addEventListener('click',()=>{mobileNav.hidden=true;menuButton?.setAttribute('aria-expanded','false');if(menuButton)menuButton.textContent='Menu'}));
+const sections=document.querySelectorAll('main section[id]');const navLinks=document.querySelectorAll('.nav-links a');const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)navLinks.forEach(link=>link.classList.toggle('active',link.getAttribute('href')===`#${entry.target.id}`))}),{rootMargin:'-25% 0px -65% 0px'});sections.forEach(section=>observer.observe(section));
+const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');revealObserver.unobserve(entry.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(item=>revealObserver.observe(item));
+const updateScroll=()=>{const max=document.documentElement.scrollHeight-window.innerHeight;progress.style.width=`${max>0?(window.scrollY/max)*100:0}%`};window.addEventListener('scroll',updateScroll,{passive:true});updateScroll();
+window.addEventListener('pointermove',event=>{document.documentElement.style.setProperty('--mx',`${event.clientX}px`);document.documentElement.style.setProperty('--my',`${event.clientY}px`)},{passive:true});
+let light=false;themeButton?.addEventListener('click',()=>{light=!light;root.dataset.theme=light?'light':'dark';themeButton.textContent=light?'☾':'☼';themeButton.setAttribute('aria-label',light?'Aktifkan mode gelap':'Aktifkan mode terang')});
+window.addEventListener('scroll',()=>document.body.classList.toggle('is-scrolling',window.scrollY>10),{passive:true});
 
-if (year) year.textContent = new Date().getFullYear();
+// Small tilt interaction for project cards on pointer devices.
+document.querySelectorAll('.project-card').forEach(card=>{card.addEventListener('pointermove',event=>{if(window.matchMedia('(pointer:coarse)').matches)return;const box=card.getBoundingClientRect();const x=(event.clientX-box.left)/box.width-.5;const y=(event.clientY-box.top)/box.height-.5;card.style.transform=`perspective(700px) rotateX(${y*-2}deg) rotateY(${x*2}deg)`});card.addEventListener('pointerleave',()=>{card.style.transform=''})});
 
-menuButton?.addEventListener('click', () => {
-  const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
-  menuButton.setAttribute('aria-expanded', String(!isOpen));
-  mobileNav.hidden = isOpen;
-  menuButton.textContent = isOpen ? 'Menu' : 'Tutup';
-});
-
-document.querySelectorAll('.mobile-nav a').forEach((link) => {
-  link.addEventListener('click', () => {
-    mobileNav.hidden = true;
-    menuButton?.setAttribute('aria-expanded', 'false');
-    if (menuButton) menuButton.textContent = 'Menu';
-  });
-});
-
-const sections = document.querySelectorAll('main section[id]');
-const navLinks = document.querySelectorAll('.nav-links a');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) return;
-    navLinks.forEach((link) => link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`));
-  });
-}, { rootMargin: '-25% 0px -65% 0px' });
-sections.forEach((section) => observer.observe(section));
-
-window.addEventListener('scroll', () => {
-  document.body.classList.toggle('is-scrolling', window.scrollY > 10);
-}, { passive: true });
+if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.querySelectorAll('.hero-actions .button').forEach((button,index)=>{button.style.animation=`rise .7s ${.25+index*.1}s both`})} 
