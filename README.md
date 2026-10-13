@@ -27,3 +27,7 @@
 </p>
 
 ------
+
+<p align="center">
+sangat bangga menjadi pengangguran
+</p>
